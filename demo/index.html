@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bower Google Map Demo</title>
+
+	<style>
+		#map{
+			width:750px;
+			height:750px;
+		}
+	</style>
+
+	<script data-main="main" src="../components/requirejs/require.js"></script>
+	<script>
+		requirejs.config({
+			baseUrl: "",
+			config:{
+
+			},
+			paths:{
+				'domReady' : '../components/requirejs-domready/domReady',
+				'async' : '../components/requirejs-plugins/src/async',
+				'GoogleMap' : '../src/GoogleMap',
+				'EventEmitter': '../components/EventEmitter/dist/EventEmitter'
+			}
+		});
+	</script>
+</head>
+<body>
+	<h1>Google Map</h1>
+
+	<div id="map"></div>
+</body>
+</html>
