@@ -13,7 +13,7 @@ module.exports = (grunt) =>
 						expand: true
 						cwd: 'src'
 						src: ['GoogleMap.coffee']
-						dest: 'src'
+						dest: 'dist'
 						ext: '.js'
 					},
 					{
