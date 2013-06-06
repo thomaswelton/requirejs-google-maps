@@ -48,22 +48,7 @@ module.exports = (grunt) =>
 					'dist/GoogleMap.min.js': 'dist/GoogleMap.js'
 				}
 
-		markdown:
-			readmes:
-				files: [
-					{
-						expand: true
-						src: 'README.md'
-						dest: 'dist'
-						ext: '.html'
-					}
-				]
-
 		regarde:
-			markdown:
-				files: 'README.html'
-				tasks: 'markdown'
-			
 			coffee:
 				files: ['src/**/*.coffee']
 				tasks: ['coffee']
@@ -98,22 +83,10 @@ module.exports = (grunt) =>
 						'mootools' : '../demo/mootools'
 					}
 
-		shell:
-			bower_cache:
-				command: 'bower cache-clean'
-				options:
-					stdout: true
-
-			bower:
-				command: 'bower install'
-				options:
-					stdout: true
-
 		
 	grunt.loadNpmTasks 'grunt-contrib-coffee'
 	grunt.loadNpmTasks 'grunt-remove-logging'
 	grunt.loadNpmTasks 'grunt-contrib-uglify'
-	grunt.loadNpmTasks 'grunt-markdown'
 	grunt.loadNpmTasks 'grunt-regarde'
 	grunt.loadNpmTasks 'grunt-contrib-connect'
 	grunt.loadNpmTasks 'grunt-contrib-requirejs'
@@ -127,7 +100,7 @@ module.exports = (grunt) =>
 
 	grunt.registerTask 'commit', ['default', 'git']
 	
-	grunt.registerTask 'compile', 'Compile coffeescript and markdown', ['coffee', 'markdown']
+	grunt.registerTask 'compile', 'Compile coffeescript', ['coffee']
 	grunt.registerTask 'watch', 'Watch coffee and markdown files for changes and recompile', () ->
 		## always use force when watching
 		grunt.option 'force', true
