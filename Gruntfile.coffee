@@ -2,6 +2,9 @@ module.exports = (grunt) =>
 	grunt.initConfig
 		pkg: grunt.file.readJSON 'package.json'
 
+		bower:
+			install: {}
+
 		## Compile coffeescript
 		coffee:
 			compile:
@@ -116,8 +119,9 @@ module.exports = (grunt) =>
 	grunt.loadNpmTasks 'grunt-contrib-requirejs'
 	grunt.loadNpmTasks 'grunt-exec'
 	grunt.loadNpmTasks 'grunt-shell'
+	grunt.loadNpmTasks 'grunt-bower-task'
 	
-	grunt.registerTask 'default', ['shell:bower', 'compile', 'requirejs', 'uglify']
+	grunt.registerTask 'default', ['bower', 'compile', 'requirejs', 'uglify']
 
 	grunt.registerTask 'server', ['exec:server', 'exec:open', 'watch']
 
