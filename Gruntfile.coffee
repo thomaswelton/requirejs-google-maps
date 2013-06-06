@@ -25,29 +25,6 @@ module.exports = (grunt) =>
 					}
 				]
 
-		removelogging:
-			files:
-				expand: true
-				cwd: 'dist'
-				src: ['GoogleMap.min.js']
-				dest: 'dist'
-				ext: '.js'
-
-		uglify:
-			options:
-				mangle: false
-				compress: true
-				banner: """/*!
-						<%= pkg.name %> v<%= pkg.version %> 
-						<%= pkg.description %>
-						Build time: #{(new Date()).toString('dddd, MMMM ,yyyy')}
-						*/\n\n"""
-					
-			javascript:
-				files: {
-					'dist/GoogleMap.min.js': 'dist/GoogleMap.js'
-				}
-
 		regarde:
 			coffee:
 				files: ['src/**/*.coffee']
@@ -67,34 +44,15 @@ module.exports = (grunt) =>
 			open:
 				command: 'open http://localhost:9001/'
 
-		requirejs:
-			compile:
-				options:
-					optimizeCss: false
-					optimize: 'none'
-					logLevel: 1
-					name: "GoogleMap"
-					out: "dist/GoogleMap.js"
-					baseUrl: "src"
-					exclude: ['async', 'mootools']
-					paths:{
-						'async' : '../components/requirejs-plugins/src/async'
-						'GoogleMap': '../src/GoogleMap'
-						'mootools' : '../demo/mootools'
-					}
-
 		
 	grunt.loadNpmTasks 'grunt-contrib-coffee'
-	grunt.loadNpmTasks 'grunt-remove-logging'
-	grunt.loadNpmTasks 'grunt-contrib-uglify'
 	grunt.loadNpmTasks 'grunt-regarde'
 	grunt.loadNpmTasks 'grunt-contrib-connect'
-	grunt.loadNpmTasks 'grunt-contrib-requirejs'
 	grunt.loadNpmTasks 'grunt-exec'
 	grunt.loadNpmTasks 'grunt-shell'
 	grunt.loadNpmTasks 'grunt-bower-task'
 	
-	grunt.registerTask 'default', ['bower', 'compile', 'requirejs', 'uglify']
+	grunt.registerTask 'default', ['bower', 'compile']
 
 	grunt.registerTask 'server', ['exec:server', 'exec:open', 'watch']
 
