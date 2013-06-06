@@ -49,7 +49,6 @@ module.exports = (grunt) =>
 	grunt.loadNpmTasks 'grunt-contrib-watch'
 	grunt.loadNpmTasks 'grunt-contrib-connect'
 	grunt.loadNpmTasks 'grunt-exec'
-	grunt.loadNpmTasks 'grunt-shell'
 	grunt.loadNpmTasks 'grunt-bower-task'
 	
 	grunt.registerTask 'default', ['bower', 'compile']
