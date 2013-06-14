@@ -5,6 +5,7 @@
   , "dependencies": {
       "requirejs": "git://github.com/jrburke/requirejs"
     , "requirejs-domready": "git://github.com/thomaswelton/domReady.git"
+    , "requirejs-plugins": "1.0.*"
   }
   , "ignore": [
       "**/.*"
