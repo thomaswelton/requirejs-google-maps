@@ -1,5 +1,5 @@
 {
-    "name": "bower-google-maps"
+    "name": "requirejs-google-maps"
   , "description": "Google Maps loader and helper"
   , "version": "0.0.0"
   , "scripts": {
@@ -10,7 +10,7 @@
   }
   , "repository": {
       "type": "git",
-      "url": "https://github.com/thomaswelton/bower-google-maps.git"
+      "url": "https://github.com/thomaswelton/requirejs-google-maps.git"
   }
   , "dependencies": {
       "bower": ">= 0.9.x"
