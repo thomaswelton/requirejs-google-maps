@@ -3,22 +3,26 @@
   , "description": "Google Maps loader and helper"
   , "version": "0.0.0"
   , "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt tests --verbose"
   }
   , "engines": {
-      "node": ">=0.8"
+      "node": "0.8.24"
   }
   , "repository": {
       "type": "git",
       "url": "https://github.com/thomaswelton/bower-google-maps.git"
   }
-  , "devDependencies": {
-      "grunt": ">= 0.4.1"
-    , "bower": ">= 0.9.x"
-    , "grunt-bower-task": ">= 0.2.3"
+  , "dependencies": {
+      "bower": ">= 0.9.x"
+    , "grunt": ">= 0.4.1"
     , "grunt-contrib-coffee": ">= 0.6.6"
     , "grunt-contrib-watch": "~0.4.4"
     , "grunt-contrib-connect": "~0.3.0"
     , "grunt-exec": "~0.4.0"
+    , "grunt-bower-task": ">= 0.2.3"
+    , "grunt-contrib-nodeunit": "~0.2.0"
+  }
+  , "devDependencies": {
+    "coffee-script": "*"
   }
 }

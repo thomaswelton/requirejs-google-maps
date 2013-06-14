@@ -5,13 +5,11 @@
 
   define(["async!https://maps.googleapis.com/maps/api/js?v=3&sensor=true"], function() {
     var GoogleMap;
-
     return GoogleMap = (function(_super) {
       __extends(GoogleMap, _super);
 
       function GoogleMap(el, options) {
         var defaultOptions, key, val;
-
         this.el = el;
         this.options = options != null ? options : {};
         this.addMarkerImage = __bind(this.addMarkerImage, this);
@@ -50,7 +48,6 @@
 
       GoogleMap.prototype.addMarker = function(position) {
         var marker;
-
         if (position == null) {
           position = this.options.center;
         }
@@ -62,7 +59,6 @@
 
       GoogleMap.prototype.addMarkerImage = function(image, position) {
         var icon, marker;
-
         marker = this.addMarker(position);
         icon = {
           url: image.url

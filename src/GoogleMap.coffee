@@ -1,6 +1,6 @@
 ## Google Maps Module
 define ["async!https://maps.googleapis.com/maps/api/js?v=3&sensor=true"],  () ->
-	return class GoogleMap extends google.maps.Map
+	class GoogleMap extends google.maps.Map
 		constructor: (@el, @options = {}) ->
 			defaultOptions = 
 				center: new google.maps.LatLng 0, 0
@@ -41,3 +41,5 @@ define ["async!https://maps.googleapis.com/maps/api/js?v=3&sensor=true"],  () ->
 
 			marker.setIcon icon
 			return marker
+
+##
