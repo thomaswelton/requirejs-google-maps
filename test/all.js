@@ -20,7 +20,7 @@ exports["Test compiled against source"] = function(test){
 	var src = grunt.file.read('src/GoogleMap.coffee');
 	var compiled = coffee.compile(src);
 
-	test.equal(commited, compiled, "Compiled Javascipt up to date with CoffeeScript source");
+	test.equal(commited, compiled, "Compiled Javascript up to date with CoffeeScript source");
 
 	test.done();
 };
