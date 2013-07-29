@@ -6,7 +6,7 @@
     "test": "grunt tests --verbose"
   }
   , "engines": {
-      "node": "0.8.24"
+      "node": "0.10.0"
   }
   , "repository": {
       "type": "git",

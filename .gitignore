@@ -2,4 +2,5 @@
 /node_modules/
 /components/
 /demo/components/
+/bower_components/
 /demo/*.js

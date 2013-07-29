@@ -3,8 +3,8 @@
   , "version": "0.0.0"
   , "main": "dist/GoogleMap.js"
   , "dependencies": {
-      "requirejs": "git://github.com/jrburke/requirejs"
-    , "requirejs-domready": "git://github.com/thomaswelton/domReady.git"
+      "requirejs": "2.1.*"
+    , "requirejs-domready": "2.0.*"
     , "requirejs-plugins": "1.0.*"
   }
   , "ignore": [
